@@ -4,3 +4,9 @@
 ```bash
 bash <(wget -qO- https://raw.githubusercontent.com/scdnlab/easy-ubuntu-dev-setup/master/lamp_setup.sh)
 ```
+
+##Install composer on Ubuntu 14.04
+###Please run the following command on your Terminal
+```bash
+bash <(wget -qO- https://raw.githubusercontent.com/scdnlab/easy-ubuntu-dev-setup/master/composer.sh)
+```
