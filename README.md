@@ -15,6 +15,11 @@ bash <(wget -qO- https://raw.githubusercontent.com/scdnlab/easy-ubuntu-dev-setup
 ```
 
 ##Generate SSH Key on Ubuntu 14.04
+## Warning
+
+In case you are trying to use xclip on remote host just add -X to your ssh command
+sh user@host -X
+
 ###Please run the following command on your Terminal
 ```bash
 bash <(wget -qO- https://raw.githubusercontent.com/scdnlab/easy-ubuntu-dev-setup/master/generate_ssh.sh)
