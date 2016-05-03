@@ -13,3 +13,9 @@ When the first prompt of phpmyadmin appears, apache2 is highlighted, but not sel
 ```bash
 bash <(wget -qO- https://raw.githubusercontent.com/scdnlab/easy-ubuntu-dev-setup/master/composer.sh)
 ```
+
+##Generate SSH Key on Ubuntu 14.04
+###Please run the following command on your Terminal
+```bash
+bash <(wget -qO- https://raw.githubusercontent.com/scdnlab/easy-ubuntu-dev-setup/master/generate_ssh.sh)
+```
