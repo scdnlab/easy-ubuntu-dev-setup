@@ -18,7 +18,7 @@ bash <(wget -qO- https://raw.githubusercontent.com/scdnlab/easy-ubuntu-dev-setup
 ## Warning
 
 In case you are trying to use xclip on remote host just add -X to your ssh command
-<b>sh user@host -X</b>
+<b>ssh user@host -X</b>
 
 ###Please run the following command on your Terminal
 ```bash
