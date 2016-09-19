@@ -1,8 +1,14 @@
 # easy-ubuntu-dev-setup
-##Install LAMP Stack on Ubuntu 14.04
+
+##Install LAMP Stack on Ubuntu 16.04 & Linux Mint 18
 ###Please run the following command on your Terminal
 ```bash
 bash <(wget -qO- https://raw.githubusercontent.com/scdnlab/easy-ubuntu-dev-setup/master/lamp_setup.sh)
+```
+##Install LAMP Stack on Ubuntu 14.04
+###Please run the following command on your Terminal
+```bash
+bash <(wget -qO- https://raw.githubusercontent.com/scdnlab/easy-ubuntu-dev-setup/14.04/lamp_setup.sh)
 ```
 ## Warning
 
