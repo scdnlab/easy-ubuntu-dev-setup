@@ -13,7 +13,7 @@ sudo apt-get install apache2
 echo -e "Apache2 Installation Completed Successfully\n"
 
 echo "Step:3 [Install MySQL]"
-sudo apt-get install mysql-server mysql-client
+sudo apt-get install mysql-server mysql-client libmysqlclient-dev
 echo -e "MySQL Installation Completed Successfully\n"
 
 echo "Step:4 [Install PHP7]"
