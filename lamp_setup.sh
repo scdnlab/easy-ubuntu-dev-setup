@@ -13,31 +13,27 @@ sudo apt-get install apache2
 echo -e "Apache2 Installation Completed Successfully\n"
 
 echo "Step:3 [Install MySQL]"
-sudo apt-get install mysql-server mysql-client libmysqlclient-dev
+sudo apt-get install mysql-server php5-mysql
 echo -e "MySQL Installation Completed Successfully\n"
 
-echo "Step:4 [Install PHP7]"
-sudo apt-get install php7.0-mysql php7.0-curl php7.0-json php7.0-cgi  php7.0 libapache2-mod-php7
+echo "Step:4 [Install PHP]"
+sudo apt-get install php5 libapache2-mod-php5 php5-mcrypt php5-cli
 echo -e "PHP Installation Completed Successfully\n"
 
 echo "Step:5 [Install PHPmyadmin]"
 sudo apt-get install phpmyadmin
 echo -e "PHPmyadmin Installation Completed Successfully\n"
 
-sudo systemctl restart apache2
-
 echo "Step:6 [Install curl]"
 sudo apt-get install curl
 echo -e "curl Installation Completed Successfully\n"
 
 echo "Step:7 [Install Git]"
-sudo add-apt-repository ppa:git-core/ppa
-sudo apt-get update
 sudo apt-get install git
 echo -e "Git Installation Completed Successfully\n"
 
 echo "Step:8 [Install mcrypt and enable rewrite]"
-sudo php7.0-mcrypt mcrypt
+sudo php5enmod mcrypt
 sudo a2enmod rewrite
 sudo service apache2 restart
 echo -e "mcrypt Installation and enable rewrite Completed Successfully\n" 
