@@ -47,4 +47,10 @@ curl -sS https://getcomposer.org/installer | php
 sudo mv composer.phar /usr/local/bin/composer
 echo -e "Composer Installation Completed Successfully\n"
 
+echo "Step:10 [Install Sublime Text 3]"
+sudo add-apt-repository ppa:webupd8team/sublime-text-3
+sudo apt-get update
+sudo apt-get install sublime-text-installer
+echo -e "Sublime Text 3 Installation Completed Successfully\n"
+
 echo "Thanks  !!!"
