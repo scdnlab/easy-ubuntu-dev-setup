@@ -13,10 +13,7 @@ ssh-add ~/.ssh/id_rsa
 echo -e "SSH key added to the ssh-agent Successfully\n"
 
 echo "Step:3 [Adding a new SSH key to your GitHub/Gitlab account]"
-echo "To copy the SSH Key,we need to install xclip"
-sudo apt-get install xclip
-xclip -sel clip < ~/.ssh/id_rsa.pub
-echo -e "SSH key copied to Clipboard Successfully\n"
-echo -e "Please Go to your Github/Gitlab account > SSH Key > Add New SSH Key; Paste the Key and Save"
+echo -e "Please Go to your Github/Gitlab account > SSH Key > Add New SSH Key; Paste the below Key and Save"
+cat /root/.ssh/id_rsa.pub
 
 echo "Thanks  !!!"
