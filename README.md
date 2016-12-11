@@ -20,11 +20,14 @@ When the first prompt of phpmyadmin appears, apache2 is highlighted, but not sel
 bash <(wget -qO- https://raw.githubusercontent.com/scdnlab/easy-ubuntu-dev-setup/master/composer.sh)
 ```
 
-##Generate SSH Key on Ubuntu 14.04
-## Warning
+##Add Swap Memory on Ubuntu 14.04
 
-In case you are trying to use xclip on remote host just add -X to your ssh command
-<b>ssh user@host -X</b>
+###Please run the following command on your Terminal
+```bash
+bash <(wget -qO- https://raw.githubusercontent.com/scdnlab/easy-ubuntu-dev-setup/master/add_swap_memory.sh)
+```
+
+##Generate SSH Key on Ubuntu 14.04
 
 ###Please run the following command on your Terminal
 ```bash
