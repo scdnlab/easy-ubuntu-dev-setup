@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Welcome to Easy Ubuntu Dev Setup 1.0"
+echo "Welcome to Easy Ubuntu Dev Setup 2.0"
 echo -e "Maintained By SUST CSE Developer Network (SCDN)\n"
 
 echo "Steap:1 [System Update]"
@@ -17,7 +17,7 @@ sudo apt-get install mysql-server mysql-client libmysqlclient-dev
 echo -e "MySQL Installation Completed Successfully\n"
 
 echo "Step:4 [Install PHP7]"
-sudo apt-get install php7.0-mysql php7.0-curl php7.0-json php7.0-cgi  php7.0 libapache2-mod-php7 php7.0-zip
+sudo apt-get install php7.0 php7.0-fpm php7.0-mysql php7.0-curl php7.0-json php7.0-cgi libapache2-mod-php7 php7.0-zip php7.0-mcrypt php7.0-mbstring php7.0-xml php-xml php7.0-intl
 echo -e "PHP Installation Completed Successfully\n"
 
 echo "Step:5 [Install PHPmyadmin]"
