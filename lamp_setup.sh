@@ -53,4 +53,4 @@ sudo apt-get update
 sudo apt-get install sublime-text-installer
 echo -e "Sublime Text 3 Installation Completed Successfully\n"
 
-echo "Thanks  !!!"
+echo "Thanks  !!! ~ SUST CSE Developer Network (SCDN) - http://scdnlab.com"
