@@ -33,4 +33,10 @@ bash <(wget -qO- https://raw.githubusercontent.com/scdnlab/easy-ubuntu-dev-setup
 ```bash
 bash <(wget -qO- https://raw.githubusercontent.com/scdnlab/easy-ubuntu-dev-setup/master/generate_ssh.sh)
 ```
+
 ## Install Node.js and NPM on Ubuntu 16.04
+
+### Please run the following command on your Terminal
+```bash
+bash <(wget -qO- https://raw.githubusercontent.com/scdnlab/easy-ubuntu-dev-setup/master/nodejs.sh)
+```
