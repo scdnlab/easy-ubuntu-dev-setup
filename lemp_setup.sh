@@ -21,8 +21,8 @@ sudo apt-get install -y software-properties-common
 sudo add-apt-repository ppa:ondrej/php -y 
 sudo apt-get -y update
 sudo apt-get install -y php7.2
-udo apt-cache search php7.2
-sudo apt-get install -y php-redis php7.2-cli php7.2-fpm php7.2-mysql php7.2-curl php7.2-json php7.2-cgi libphp7.2-embed libapache2-mod-php7.2 php7.2-zip php7.2-mbstring php7.2-xml php7.2-intl
+sudo apt-cache search php7.2
+sudo apt-get install -y php7.2-redis php7.2-cli php7.2-fpm php7.2-mysql php7.2-curl php7.2-json php7.2-cgi libphp7.2-embed libapache2-mod-php7.2 php7.2-zip php7.2-mbstring php7.2-xml php7.2-intl
 
 echo -e "PHP 7.2 Installation Completed Successfully\n"
 
