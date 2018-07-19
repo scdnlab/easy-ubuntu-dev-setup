@@ -30,45 +30,40 @@ sudo systemctl start php7.2-fpm
 sudo systemctl enable php7.2-fpm
 
 echo "Step:5 [Install PHPmyadmin]"
-sudo apt-get install phpmyadmin
+wget https://files.phpmyadmin.net/phpMyAdmin/4.7.9/phpMyAdmin-4.7.9-all-languages.zip -O ./phpmyadmin.zip
+unzip phpmyadmin.zip -d /home/farhad/html
+mv phpMyAdmin-4.7.9-all-languages /home/farhad/html/phpmyadmin
+sudo chown -R www-data:www-data /home/farhad/html/phpmyadmin/
+sudo chmod -R 755 /home/farhad/html/phpmyadmin
 echo -e "PHPmyadmin Installation Completed Successfully\n"
 
 sudo systemctl restart nginx
 
 echo "Remove the default symlink in sites-enabled directory"
 sudo rm /etc/nginx/sites-enabled/default
-cat > /etc/nginx/sites-enabled/default <<EOF
-
+cat > /etc/nginx/sites-enabled/default.conf <<EOF
 server {
-  listen 80;
-  listen [::]:80;
-  server_name localhost;
-  root /usr/share/nginx/html/;
-  index index.php index.html index.htm index.nginx-debian.html;
+   listen 80;
+   #listen [::]:80;
+   root /home/$USER/html;
+   index index.php index.html index.htm index.nginx-debian.html;
+   server_name localhost;
 
-  location / {
-    try_files $uri $uri/ =404;
-  }
+   location / {
+       try_files $uri $uri/ /index.php?$query_string;
+   }
 
-  error_page 404 /404.html;
-  error_page 500 502 503 504 /50x.html;
-
-  location = /50x.html {
-    root /usr/share/nginx/html;
-  }
-
-  location ~ \.php$ {
-    fastcgi_pass unix:/run/php/php7.0-fpm.sock;
-    fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
-    include fastcgi_params;
-    include snippets/fastcgi-php.conf;
-  }
-
-  location ~ /\.ht {
-    deny all;
-  }
+location ~ \.php$ {
+    #NOTE: You should have "cgi.fix_pathinfo = 0;" in php.ini
+    include fastcgi_params;                
+    fastcgi_intercept_errors on;
+    fastcgi_pass unix:/run/php/php7.2-fpm.sock;
+    fastcgi_param SCRIPT_FILENAME $document_root/$fastcgi_script_name;
 }
-
+   location ~ /\.ht {
+       deny all;
+   }
+}
 EOF
 
 sudo nginx -t
